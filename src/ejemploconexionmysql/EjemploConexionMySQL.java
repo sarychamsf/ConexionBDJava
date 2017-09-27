@@ -45,6 +45,9 @@ public class EjemploConexionMySQL {
             while (rs.next()) {
                 System.out.println(rs.getString("customerName"));
             }
+            
+            // 4. Insert            
+            int count = st.executeUpdate ("INSERT INTO customers VALUES(600, 'Sara', 'Chamseddine', 'Brenda', '3104787336', 'Calle 86 \"10-68', 'La Cabrera', 'Bogotá DC', 'Cundinamarca', '12345', 'Colombia', 1370, 1000000.0)");
 
         } catch (InstantiationException ex) {
             System.out.println("Clase no encontrada.");
